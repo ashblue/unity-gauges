@@ -1,0 +1,19 @@
+{
+    "name": "com.fluid.unity-gauges.Editor.Tests",
+    "references": [
+        "com.fluid.unity-gauges",
+        "com.fluid.unity-gauges.Editor"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
