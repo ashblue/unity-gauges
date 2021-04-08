@@ -76,6 +76,19 @@ namespace CleverCrow.Fluid.Gauges.Tests {
             }
         }
 
+        public class ChargePercentProperty {
+            [Test]
+            public void It_should_return_the_expected_value () {
+                var charge = 10;
+                var chargeMax = 20;
+                var chargePercent = charge / (float)chargeMax;
+
+                var gauge = new Gauge(chargeMax) { Charge = charge };
+
+                Assert.AreEqual(gauge.ChargePercent, chargePercent);
+            }
+        }
+
         public class ChargeProperty {
             [Test]
             public void Changes_when_set () {
