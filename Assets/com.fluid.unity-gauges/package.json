@@ -1,7 +1,28 @@
 {
   "name": "com.fluid.unity-gauges",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "displayName": "Unity Gauges",
   "description": "A simple utility script for creating gauges to maintain stats such as health, energy, stamina, ect.",
-  "unity": "2019.1"
+  "unity": "2019.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashblue/unity-gauges.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashblue/unity-gauges/issues"
+  },
+  "homepage": "https://github.com/ashblue/unity-gauges#readme",
+  "keywords": [
+    "gauge",
+    "health bar",
+    "stamina bar",
+    "energy bar",
+    "stats management"
+  ],
+  "author": {
+    "name": "Ash Blue",
+    "email": "ash@blueashes.com",
+    "url": "https://twitter.com/ashbluewd"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "com.fluid.unity-gauges",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2019.1",
   "displayName": "Unity Gauges",
   "description": "A simple utility script for creating gauges to maintain stats such as health, energy, stamina, ect.",

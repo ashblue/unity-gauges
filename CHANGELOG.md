@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ashblue/unity-gauges/compare/v1.0.0...v1.0.1) (2021-04-08)
+
+
+### Bug Fixes
+
+* **master:** branch was not commiting the proper files ([8b76bf0](https://github.com/ashblue/unity-gauges/commit/8b76bf0a1b543cfb2241564898583ba949616b3d))
+
 # 1.0.0 (2021-04-08)
 
 
