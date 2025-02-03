@@ -11,12 +11,11 @@ A simple utility script for creating gauges to maintain stats such as health, en
 
 Unity Gauge is a light implementation with no dependencies. The creation is class based and does not require a MonoBehavior.
 
-The below example creates a health bar that could be attached to a character. With the `_onChange` event you can easily makes health changes modify a connected character.
+The below example creates a health bar that could be attached to a character. With event bindings you can easily sync your health to live UI events.
 
 ```c#
 using CleverCrow.Fluid.Gauges;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ExampleHealthBar : MonoBehaviour {
@@ -25,21 +24,23 @@ public class ExampleHealthBar : MonoBehaviour {
     [SerializeField]
     private Slider _healthBar;
 
-    [SerializeField]
-    private UnityEvent _onChange;
-
     private void Start () {
         _healthBar.maxValue = _health.ChargeMax;
-        _healthBar.value = 5;
-        _healthBar.onValueChanged.AddListener((changeValue) => _onChange.Invoke());
+        _healthBar.value = _health.Charge;
+        _health.OnChange(OnHealthChange);
     }
 
     public void AddHealth (int health) {
-        _healthBar.value += health;
+        _health.Charge += health;
     }
 
     public void RemoveHealth (int health) {
-        _healthBar.value -= health;
+        _health.Charge -= health;
+    }
+
+    void OnHealthChange (int charge, int chargeMax) {
+        _healthBar.maxValue = chargeMax;
+        _healthBar.value = charge;
     }
 }
 ```
